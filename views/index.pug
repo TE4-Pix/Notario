@@ -2,21 +2,21 @@ extends layout
 
 block content
   .container
-    ul#entries
-    
-    form(id='FormAdd')
-      h2 Add Note
-      hr
-      hr
-      p
-        | title: 
-        input(id='title', type = 'text', name ='title')
-        br
-        br
-        | description: 
-        input(id='content', type='text', name='content')
-        br
-        br
-      input(type='submit', class="button", value='Add note')
+    #addNotes
+      form(id='FormAdd')
+        h2 + Add New Note
+        p
+          | title: 
+          input(id='title', type = 'text', name ='title')
+          br
+          br
+          | description: 
+          input(id='content', type='text', name='content')
+          br
+          br
+        input(type='submit', class="button", value='Add note')
 
+    #mainContent
+      ul#entries
+      
   script(src='/javascripts/main.js')

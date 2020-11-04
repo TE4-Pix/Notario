@@ -10,6 +10,18 @@ var notes = [
     {
         "title": "Boms",
         "content": "hmm, true that",
+    },
+    {
+        "title": "James",
+        "content": "bababoey",
+    },
+    {
+        "title": "Hamzo",
+        "content": "it really do be like that sometimes",
+    },
+    {
+        "title": "Boms",
+        "content": "hmm, true that",
     }
 ];
 
@@ -43,8 +55,11 @@ function listItems() {
 
         const markup = ` 
                     <h2>
-                    <span class='noteTitle'>${item.title}</span>
-                    <div class=divContent>$${item.content}</div>
+                    </br>
+                    <span class=noteTitle>${item.title}</span>
+                    <div class=divContent>${item.content}</div>
+                    </br>
+                    <hr>
                     </h2>
         `;
 

@@ -1,8 +1,91 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-attachment: fixed;
+  /*background-image: linear-gradient( #d6ab97, white);  /*(#fff, #6e3f98);*/
+  background: rgba(20, 20, 20);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font: Verdana, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-a {
-  color: #00B7FF;
+/*general*/
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/*Header*/
+#page-header {
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 90%;
+  padding: 0px;
+  height: 130px;
+  color: white;
+}
+
+#page-header h1 {
+  float: left;
+  font-family: Comfortaa;
+  font-size: 110px;
+  margin:0;
+}
+
+/*Main content*/
+.container {
+  padding: 0;
+  width: 100%;
+}
+
+.container h2 {
+  margin: 0;
+  font-weight: normal;
+}
+
+#addNotes {
+  background: rgb(43, 43, 43);
+  border-radius: 15px;
+  color: white;
+  font-family: comfortaa;
+  font-size: 40px;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 20px;
+  width: 85%;
+}
+
+#mainContent {
+  background: rgb(43, 43, 43);
+  border-radius: 15px;
+  font-family: comfortaa;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 20px;
+  width: 85%;
+}
+
+.noteTitle {
+  color: white;
+  font-size: 40px;
+  letter-spacing: 0px;
+}
+
+.divContent {
+  color: rgb(214, 214, 214);
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+
+/*footer*/
+#page-footer {
+  background-color: rgba(22, 22, 22, 0.97);
+  bottom: 0px;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  width: 100%;
 }
