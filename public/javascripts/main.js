@@ -1,0 +1,54 @@
+var notes = [
+    {
+        "title": "James",
+        "content": "bababoey",
+    },
+    {
+        "title": "Hamzo",
+        "content": "it really do be like that sometimes",
+    },
+    {
+        "title": "Boms",
+        "content": "hmm, true that",
+    }
+];
+
+document.getElementById('FormAdd').addEventListener('submit', e => {
+    e.preventDefault();
+
+    let params = (new URL(document.location)).searchParams;
+    let query = params.get('e');
+    console.log(query);
+    
+    
+    var inputTitle = document.getElementById('title').value;
+    var inputContent = document.getElementById('content').value;
+    notes.unshift({
+        "title": inputTitle,
+        "content": inputContent
+    });
+    
+    console.log(notes);
+
+    document.getElementById('title').value;
+    document.getElementById('content').value;
+
+    listItems();
+});
+
+function listItems() {
+    notes.forEach(item => {
+        const li = document.createElement('li');
+        li.classList.add('entry');
+
+        const markup = ` 
+                    <h2>
+                    <span class='noteTitle'>${item.title}</span>
+                    <div class=divContent>$${item.content}</div>
+                    </h2>
+        `;
+
+        li.innerHTML = markup;
+        document.getElementById('entries').appendChild(li);
+    });
+}
