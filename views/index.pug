@@ -1,5 +1,20 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .container
+    
+    form(id='FormAdd')
+      h2 Add Note
+      hr
+      hr
+      p
+        | title:
+        input(id='title', type = 'text', name ='title')
+        br
+        br
+        | description:
+        input(id='description', type='text', name='description')
+        br
+        br
+      input(type='submit', class="button", value='Add note')
+
