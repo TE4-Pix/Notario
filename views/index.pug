@@ -5,16 +5,18 @@ block content
     #addNotes
       form(id='FormAdd')
         h2 + Add New Note
-        p
-          | title: 
+        //p
+          | Title: 
+          br
           input(id='title', type = 'text', name ='title')
           br
           br
-          | description: 
+          | Note: 
+          br
           input(id='content', type='text', name='content')
           br
           br
-        input(type='submit', class="button", value='Add note')
+        //input(id='button', type='submit', class="button", value='Save')
 
     #mainContent
       ul#entries
