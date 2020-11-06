@@ -114,6 +114,7 @@ ul {
 }
 
 #saveBtn:hover, #saveBtn:focus {
+  background: rgba(255, 255, 255, 0.5);
   color: #2980B9;
 }
 
