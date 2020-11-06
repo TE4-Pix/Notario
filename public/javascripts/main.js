@@ -57,6 +57,8 @@ function listItems() {
         const li = document.createElement('li');
         li.classList.add('entry');
 
+        item.content = item.content.replace(/(\r\n|\n|\r)/gm,'');
+
         const markup = ` 
                     <h2>
                     </br>
@@ -69,6 +71,8 @@ function listItems() {
 
         li.innerHTML = markup;
         ul.appendChild(li);
+
+        console.log(item.content);
     });
     document.getElementById('mainContent').appendChild(ul);
 
