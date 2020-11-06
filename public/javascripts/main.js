@@ -66,16 +66,16 @@ function listItems() {
         const li = document.createElement('li');
         li.classList.add('entry');
 
-        item.content = item.content.replace(/(\r\n|\n|\r)/gm,'');
-        if(item.content.length > 30) item.content = item.content.substring(0,30);
-        if(item.content.length > 26) item.content = item.content + '...';
+        temp = item.content.replace(/(\r\n|\n|\r)/gm,'');
+        if(temp.length > 30) temp = temp.substring(0,30);
+        if(temp.length > 26) temp = temp + '...';
 
         const markup = ` 
                     <a href="/note?n=${item.id}"><div class=notePreview>
                     <h2>
                     </br>
                     <span class=noteTitle>${item.title}</span>
-                    <div class=divContent>${item.content}</div>
+                    <div class=divContent>${temp}</div>
                     </br>
                     <hr>
                     </h2>
