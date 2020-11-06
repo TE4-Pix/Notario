@@ -58,6 +58,7 @@ function listItems() {
         li.classList.add('entry');
 
         item.content = item.content.replace(/(\r\n|\n|\r)/gm,'');
+        if(item.content.length > 40) item.content = item.content.substring(0,40);
 
         const markup = ` 
                     <h2>
