@@ -5,7 +5,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   font: Verdana, Helvetica, Arial, sans-serif;
-  font-size: 100%;
   margin: 0;
   padding: 0;
 }
@@ -86,23 +85,30 @@ ul {
 }
 
 #title {
+  border-radius: 5px;
   border-style: none;
-  font-size: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 35px;
   padding: 5px;
   width: 50%;
 }
 
 #content {
+  border-radius: 5px;
   border-style: none;
-  font-size: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 35px;
   padding: 5px;
   width: 100%;
 }
 
 #saveBtn {
   border-style: none;
+  border-radius: 5px;
   float: right;
   font-size: 30px;
+  font-family: comfortaa;
+  font-weight: bold;
   height: 70px;
   width: 100px;
 }
@@ -124,18 +130,18 @@ ul {
 }
 
 .entry {
-  background: seagreen;
+  background: rgb(43, 43, 43);
 }
 
 .noteTitle {
   color: white;
-  font-size: 0.5rem;
+  font-size: 35px;
   letter-spacing: 0px;
 }
 
 .divContent {
-  color: rgb(214, 214, 214);
-  font-size: 2rem;
+  color: rgb(207, 207, 207);
+  font-size: 25px;
   letter-spacing: 3px;
 }
 
