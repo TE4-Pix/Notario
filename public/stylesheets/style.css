@@ -52,7 +52,7 @@ ul {
   width: 85%;
 }
 
-.dropbtn {
+#dropBtn {
   background: rgb(43, 43, 43);
   color: white;
   font-family: comfortaa;

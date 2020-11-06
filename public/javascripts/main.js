@@ -74,4 +74,10 @@ function listItems() {
 
 }
 
+function myFunction() {
+    document.getElementById('myDropdown').classList.toggle('show');
+}
+  
+
 listItems();
+
