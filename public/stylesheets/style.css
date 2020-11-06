@@ -44,7 +44,18 @@ ul {
 }
 
 /*Add column*/
-#addNotes {
+#addNote {
+  background: rgb(43, 43, 43);
+  border-radius: 15px;
+  color: white;
+  font-family: comfortaa;
+  font-size: 35px;
+  margin: 0 auto;
+  padding : 20px;
+  width: 85%;
+}
+
+#addForm {
   background: rgb(43, 43, 43);
   border-radius: 15px;
   color: white;
@@ -58,16 +69,19 @@ ul {
 }
 
 #title {
+  background: red;
   border-style: none;
+  border-radius: 15px;
   font-size: 35px;
   height: 30px;
   width: 300px;
 }
 
 #content {
+  background: red;
   border-style: none;
+  color: white;
   font-size: 35px;
-  height: 300px;
   width: 100%;
 }
 
