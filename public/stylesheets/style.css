@@ -45,7 +45,7 @@ ul {
 
 /*Add column*/
 #addNote {
-  background: yellow;
+  background: rgb(43, 43, 43);
   border-radius: 15px;
   margin: 0 auto;
   padding: 20px;
@@ -54,6 +54,8 @@ ul {
 
 #dropBtn {
   background: rgb(43, 43, 43);
+  border-style: none;
+  border-radius: 5px;
   color: white;
   font-family: comfortaa;
   font-size: 50px;
@@ -61,31 +63,21 @@ ul {
   width: 100%;
 }
 
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
-}
-
-.dropdown {
-  position: relative;
-  /*display: inline-block; /*denna som placerar allt åt vänster*/
+#dropBtn:hover, #dropBtn:focus {
+  color: #2980B9;
 }
 
 .dropdown-content {
   display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
+  min-height: 250px;
+  width: 100%;
   z-index: 1;
 }
 
-.show {display:block;}*/
+.show {display:block;}
 
   /*dropdown content*/
 #addForm {
-  background: rgb(43, 43, 43);
-  color: white;
-  font-family: comfortaa;
-  font-size: 35px;
   margin: 0 auto;
   margin-top: 40px;
   overflow: hidden;
@@ -93,27 +85,29 @@ ul {
 }
 
 #title {
-  background: red;
   border-style: none;
   font-size: 40px;
-  height: 30px;
-  width: 300px;
+  padding: 5px;
+  width: 50%;
 }
 
 #content {
-  background: red;
   border-style: none;
-  color: white;
-  font-size: 35px;
+  font-size: 40px;
+  padding: 5px;
   width: 100%;
 }
 
-#button {
+#saveBtn {
   border-style: none;
   float: right;
   font-size: 30px;
   height: 70px;
   width: 100px;
+}
+
+#saveBtn:hover, #saveBtn:focus {
+  color: #2980B9;
 }
 
 /*Content column*/
