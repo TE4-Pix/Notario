@@ -58,7 +58,8 @@ function listItems() {
         li.classList.add('entry');
 
         item.content = item.content.replace(/(\r\n|\n|\r)/gm,'');
-        if(item.content.length > 40) item.content = item.content.substring(0,40);
+        if(item.content.length > 30) item.content = item.content.substring(0,30);
+        if(item.content.length > 26) item.content = item.content + ' ...';
 
         const markup = ` 
                     <h2>
@@ -72,8 +73,6 @@ function listItems() {
 
         li.innerHTML = markup;
         ul.appendChild(li);
-
-        console.log(item.content);
     });
     document.getElementById('mainContent').appendChild(ul);
 
