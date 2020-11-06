@@ -1,33 +1,33 @@
 var notes = [
     {
         "id": 0,
-        "title": "James",
-        "content": "bababoey",
+        "title": "Shoppinglista",
+        "content": "-Pannkakor\n-Mjölk\n-Kaffe\n-Bärs",
     },
     {
         "id": 1,
-        "title": "Hamzo",
-        "content": "it really do be like that sometimes",
+        "title": "Lorem Ipsum",
+        "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     },
     {
         "id": 2,
-        "title": "Boms",
-        "content": "hmm, true that",
+        "title": "Favoritlåtar",
+        "content": "-Gangnam style\n-I'm Blue\n-Guld och Gröna Skogar\n-All Star",
     },
     {
         "id": 3,
         "title": "James",
-        "content": "bababoey",
+        "content": "Frihnajs",
     },
     {
         "id": 4,
-        "title": "Hamzo",
-        "content": "it really do be like that sometimes",
+        "title": "epic gamer moment",
+        "content": "Number 15: Burger king foot lettuce. The last thing you'd want in your Burger King burger is someone's foot fungus. But as it turns out, that might be what you get. A 4channer uploaded a photo anonymously to the site showcasing his feet in a plastic bin of lettuce. With the statement: This is the lettuce you eat at Burger King. Admittedly, he had shoes on. But thats even worse.",
     },
     {
         "id": 5,
-        "title": "Boms",
-        "content": "hmm, true that",
+        "title": "Gentlemen",
+        "content": "A short view back to the past",
     }
 ];
 
