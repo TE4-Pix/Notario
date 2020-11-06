@@ -130,8 +130,9 @@ ul {
   width: 85%;
 }
 
-.entry {
-  background: rgb(43, 43, 43);
+a {
+  color: white;
+  text-decoration: none;
 }
 
 .noteTitle {
@@ -146,11 +147,43 @@ ul {
   letter-spacing: 3px;
 }
 
+.noteTitle:hover, .noteTitle:focus {
+  color: #2980B9;
+}
+
+    /*Separate note page*/
+#topContent {
+  background: rgb(43, 43, 43);
+  border-radius: 15px;
+  font-family: comfortaa;
+  margin: 0 auto;
+  padding: 20px;
+  width: 85%;
+}
+
+#backBtn {
+  color: #2980B9;
+  font-size: 40px;
+}
+
+#noteViewTitle {
+  color: white;
+  font-size: 70px;
+  font-weight: normal;
+
+}
+
+#noteViewContent {
+  color: white;
+  font-size: 40px;
+}
+
 /*footer*/
 #page-footer {
   background-color: rgba(22, 22, 22, 0.97);
   bottom: 0px;
-  color: white;
+  color: #2980B9;
+  font-family: comfortaa;
   font-size: 40px;
   text-align: center;
   margin: 0;

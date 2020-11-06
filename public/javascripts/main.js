@@ -68,7 +68,7 @@ function listItems() {
 
         item.content = item.content.replace(/(\r\n|\n|\r)/gm,'');
         if(item.content.length > 30) item.content = item.content.substring(0,30);
-        if(item.content.length > 26) item.content = item.content + ' ...';
+        if(item.content.length > 26) item.content = item.content + '...';
 
         const markup = ` 
                     <a href="/note?n=${item.id}"><div class=notePreview>

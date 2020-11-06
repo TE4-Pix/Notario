@@ -1,9 +1,11 @@
 extends layout
 
 block content
+  #topContent
+    a(id='backBtn' href='/') < Notes
+
   #mainContent
     h1#noteViewTitle
     p#noteViewContent
-    script(src='/javascripts/note.js')
-      
   
+  script(src='/javascripts/note.js')
