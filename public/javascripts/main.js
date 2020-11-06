@@ -1,29 +1,37 @@
 var notes = [
     {
+        "id": 0,
         "title": "James",
         "content": "bababoey",
     },
     {
+        "id": 1,
         "title": "Hamzo",
         "content": "it really do be like that sometimes",
     },
     {
+        "id": 2,
         "title": "Boms",
         "content": "hmm, true that",
     },
     {
+        "id": 3,
         "title": "James",
         "content": "bababoey",
     },
     {
+        "id": 4,
         "title": "Hamzo",
         "content": "it really do be like that sometimes",
     },
     {
+        "id": 5,
         "title": "Boms",
         "content": "hmm, true that",
     }
 ];
+
+var count = 5;
 
 document.getElementById('FormAdd').addEventListener('submit', e => {
     e.preventDefault();
@@ -36,6 +44,7 @@ document.getElementById('FormAdd').addEventListener('submit', e => {
     var inputTitle = document.getElementById('title').value;
     var inputContent = document.getElementById('content').value;
     notes.unshift({
+        "id": count + 1,
         "title": inputTitle,
         "content": inputContent
     });
@@ -62,6 +71,7 @@ function listItems() {
         if(item.content.length > 26) item.content = item.content + ' ...';
 
         const markup = ` 
+                    <a href="/note?n=${item.id}"><div class=notePreview>
                     <h2>
                     </br>
                     <span class=noteTitle>${item.title}</span>
@@ -69,6 +79,7 @@ function listItems() {
                     </br>
                     <hr>
                     </h2>
+                    </div></a>
         `;
 
         li.innerHTML = markup;
