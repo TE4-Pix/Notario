@@ -2,21 +2,22 @@ extends layout
 
 block content
   .container
-    #addNote
-      h2 + Add New Note
+    div(class='dropdown')
+      #addNote
+        button(onclick='myFunction()', class='dropbtn') + Add New Note
+        div(id='myDropdown', class='dropdown-content')
+          #addForm      
+            form(id='FormAdd')
+              p 
+                br
+                input(id='title', type = 'text', name ='title', placeholder='Title')
+                br
 
-    #addForm      
-      form(id='FormAdd')
-        p 
-          br
-          input(id='title', type = 'text', name ='title', placeholder='Title')
-          br
-
-          br
-          input(id='content', type='text', name='content', placeholder='Note')
-          br
-          br
-        input(id='button', type='submit', class="button", value='Save')
+                br
+                input(id='content', type='text', name='content', placeholder='Note')
+                br
+                br
+              input(id='button', type='submit', class="button", value='Save')
 
     #mainContent
       script(src='/javascripts/main.js')
