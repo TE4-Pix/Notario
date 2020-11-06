@@ -39,5 +39,9 @@ console.log(query);
 
 var note = notes.find(e => e.id === parseInt(query));
 
+note.content = note.content.replace(/(\r\n|\n|\r)/gm,'<br>');
+
 document.getElementById('noteViewTitle').innerHTML = note.title;
 document.getElementById('noteViewContent').innerHTML = note.content;
+
+console.log(note.content);
