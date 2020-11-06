@@ -45,10 +45,14 @@ document.getElementById('FormAdd').addEventListener('submit', e => {
     document.getElementById('title').value;
     document.getElementById('content').value;
 
+    document.getElementById('entries').remove();
     listItems();
 });
 
 function listItems() {
+    
+    ul = document.createElement('ul');
+    ul.setAttribute('id', 'entries');
     notes.forEach(item => {
         const li = document.createElement('li');
         li.classList.add('entry');
@@ -64,6 +68,10 @@ function listItems() {
         `;
 
         li.innerHTML = markup;
-        document.getElementById('entries').appendChild(li);
+        ul.appendChild(li);
     });
+    document.getElementById('mainContent').appendChild(ul);
+
 }
+
+listItems();
