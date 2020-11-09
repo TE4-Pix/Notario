@@ -3,10 +3,11 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-const mongoose = require('mongoose');
+var mongoose = require('mongoose');
 
 var indexRouter = require('./routes/index');
 var noteRouter = require('./routes/note');
+const { finished } = require('stream');
 
 var app = express();
 
@@ -44,13 +45,11 @@ const mongoString = "mongodb+srv://NotarioAdmin:pix123@notariocluster.vqbs6.mong
 mongoose.connect(mongoString, {useNewUrlParser: true,  useUnifiedTopology: true });
 
 mongoose.connection.on("error", function(error) {
-  console.log(error)
+  console.log(error);
 });
 
 mongoose.connection.on("open", function() {
-  console.log("Connected to MongoDB database.")
+  console.log("Connected to MongoDB database.");
 });
-
-
 
 module.exports = app;
