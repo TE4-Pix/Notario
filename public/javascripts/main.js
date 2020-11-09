@@ -1,3 +1,5 @@
+
+
 var notes = [
     {
         "id": 0,
@@ -59,22 +61,32 @@ document.getElementById('FormAdd').addEventListener('submit', e => {
 });
 
 function listItems() {
+    fetch(`https://api.airtable.com/v0/appsCMsb32iQNMO3y/Table%201?api_key=keylpPfWBTCbx5mnW`)
+    .then (response => response.json())
+    .then(data => {
+    var list;
+
+    list = data.records;
+    
+    console.log(list);
     
     ul = document.createElement('ul');
     ul.setAttribute('id', 'entries');
-    notes.forEach(item => {
+    list.forEach(item => {
         const li = document.createElement('li');
         li.classList.add('entry');
 
-        temp = item.content.replace(/(\r\n|\n|\r)/gm,'');
+        
+        temp = item.fields.Content.replace(/(\r\n|\n|\r)/gm,'');
         if(temp.length > 30) temp = temp.substring(0,30);
         if(temp.length > 26) temp = temp + '...';
+        
 
         const markup = ` 
-                    <a href="/note?n=${item.id}"><div class=notePreview>
+                    <a href="/note?n=${item.fields.id}"><div class=notePreview>
                     <h2>
                     </br>
-                    <span class=noteTitle>${item.title}</span>
+                    <span class=noteTitle>${item.fields.Title}</span>
                     <div class=divContent>${temp}</div>
                     </br>
                     <hr>
@@ -86,6 +98,13 @@ function listItems() {
         ul.appendChild(li);
     });
     document.getElementById('mainContent').appendChild(ul);
+    
+    
+
+})
+.catch(() => {
+    console.log('ERROR');
+});
 
 }
 
