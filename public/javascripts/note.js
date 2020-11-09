@@ -45,13 +45,12 @@ fetch(url, { method: 'GET', headers: {'Authorization': 'Bearer keylpPfWBTCbx5mnW
 .then(response => response.json())
 .then(data => {
 
-    /**
-    data.fields.content = data.fields.content.replace(/(\r\n|\n|\r)/gm,'<br>');
-    */
+    var temp = data.fields.Content.replace(/(\r\n|\n|\r)/gm,'<br>');
+    
     
 
     document.getElementById('noteViewTitle').innerHTML = data.fields.Title;
-    document.getElementById('noteViewContent').innerHTML = data.fields.Content;
+    document.getElementById('noteViewContent').innerHTML = temp;
 
     
 });
