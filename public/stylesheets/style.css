@@ -1,6 +1,6 @@
 body {
   background-attachment: fixed;
-  /*background-image: linear-gradient( #d6ab97, white);  /*(#fff, #6e3f98);*/
+  /*background-image: linear-gradient(#6e3f98, #d6ab97);  /*(#fff, #6e3f98);*/
   background: rgba(20, 20, 20);
   background-repeat: no-repeat;
   background-size: cover;
@@ -47,50 +47,75 @@ ul {
 #addNote {
   background: rgb(43, 43, 43);
   border-radius: 15px;
-  color: white;
-  font-family: comfortaa;
-  font-size: 35px;
   margin: 0 auto;
-  padding : 20px;
-  width: 85%;
-}
-
-#addForm {
-  background: rgb(43, 43, 43);
-  border-radius: 15px;
-  color: white;
-  font-family: comfortaa;
-  font-size: 35px;
-  margin: 0 auto;
-  margin-top: 40px;
-  overflow: hidden;
   padding: 20px;
   width: 85%;
 }
 
-#title {
-  background: red;
+#dropBtn {
+  background: rgb(43, 43, 43);
   border-style: none;
-  border-radius: 15px;
-  font-size: 35px;
-  height: 30px;
-  width: 300px;
-}
-
-#content {
-  background: red;
-  border-style: none;
+  border-radius: 5px;
   color: white;
-  font-size: 35px;
+  font-family: comfortaa;
+  font-size: 50px;
+  text-align: left;
   width: 100%;
 }
 
-#button {
+#dropBtn:hover, #dropBtn:focus {
+  color: #2980B9;
+}
+
+.dropdown-content {
+  display: none;
+  min-height: 250px;
+  width: 100%;
+  z-index: 1;
+}
+
+.show {display:block;}
+
+  /*dropdown content*/
+#addForm {
+  margin: 0 auto;
+  margin-top: 40px;
+  overflow: hidden;
+  width: 100%;
+}
+
+#title {
+  border-radius: 5px;
   border-style: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 35px;
+  padding: 5px;
+  width: 50%;
+}
+
+#content {
+  border-radius: 5px;
+  border-style: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 35px;
+  padding: 5px;
+  width: 100%;
+}
+
+#saveBtn {
+  border-style: none;
+  border-radius: 5px;
   float: right;
   font-size: 30px;
+  font-family: comfortaa;
+  font-weight: bold;
   height: 70px;
   width: 100px;
+}
+
+#saveBtn:hover, #saveBtn:focus {
+  background: rgba(255, 255, 255, 0.5);
+  color: #2980B9;
 }
 
 /*Content column*/
@@ -105,23 +130,65 @@ ul {
   width: 85%;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
 .noteTitle {
   color: white;
-  font-size: 40px;
+  font-size: 35px;
   letter-spacing: 0px;
 }
 
 .divContent {
-  color: rgb(214, 214, 214);
-  font-size: 20px;
+  color: rgb(207, 207, 207);
+  font-size: 25px;
   letter-spacing: 3px;
+}
+
+.noteTitle:hover, .noteTitle:focus {
+  color: #2980B9;
+}
+
+    /*Separate note page*/
+#topContent {
+  background: rgb(43, 43, 43);
+  border-radius: 15px;
+  font-family: comfortaa;
+  margin: 0 auto;
+  padding: 20px;
+  width: 85%;
+}
+
+#backBtn {
+  color: #2980B9;
+  width: 70px;
+}
+
+#editBtn {
+  color: #2980B9;
+  float: right;
+  width: 70px;
+}
+
+#noteViewTitle {
+  color: white;
+  font-size: 70px;
+  font-weight: normal;
+}
+
+#noteViewContent {
+  color: white;
+  font-size: 40px;
 }
 
 /*footer*/
 #page-footer {
-  background-color: rgba(22, 22, 22, 0.97);
+  background-color: rgba(22, 22, 22, 0.96);
   bottom: 0px;
-  color: white;
+  color: #686868;
+  font-family: comfortaa;
   font-size: 40px;
   text-align: center;
   margin: 0;

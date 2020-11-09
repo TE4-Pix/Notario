@@ -2,23 +2,25 @@ extends layout
 
 block content
   .container
-    #addNote
-      h2 + Add New Note
-
-    #addForm      
-      form(id='FormAdd')
-        p 
-          br
-          input(id='title', type = 'text', name ='title', placeholder='Title')
-          br
-
-          br
-          input(id='content', type='text', name='content', placeholder='Note')
-          br
-          br
-        input(id='button', type='submit', class="button", value='Save')
+    div(class='dropdown')
+      #addNote
+        button(onclick='myFunction()', id='dropBtn') + Add New Note
+        div(id='myDropdown', class='dropdown-content')
+          #addForm      
+            form(id='FormAdd')
+              p 
+                br
+                input(id='title', type = 'text', name ='title', placeholder='Title')
+                br
+                br
+                br
+                textarea(id='content', name='content', placeholder='Note', rows='4')
+                br
+                br
+              input(onclick='myFunction()', id='saveBtn', type='submit', class="button", value='Save')
 
     #mainContent
       script(src='/javascripts/main.js')
       
-  
+  footer#page-footer
+    p Pix [ ] 
