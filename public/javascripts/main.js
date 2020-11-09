@@ -36,7 +36,7 @@ var notes = [
 var count = 5;
 
 function listItems() {
-    fetch(`https://api.airtable.com/v0/appsCMsb32iQNMO3y/Table%201?api_key=keylpPfWBTCbx5mnW`)
+    fetch(`https://api.airtable.com/v0/appsCMsb32iQNMO3y/Table%201?sort%5B0%5D%5Bfield%5D=Created&sort%5B0%5D%5Bdirection%5D=desc&api_key=keylpPfWBTCbx5mnW&`)
     .then (response => response.json())
     .then(data => {
     var list;
