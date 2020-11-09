@@ -83,7 +83,7 @@ function listItems() {
         
 
         const markup = ` 
-                    <a href="/note?n=${item.fields.id}"><div class=notePreview>
+                    <a href="/note?n=${item.id}"><div class=notePreview>
                     <h2>
                     </br>
                     <span class=noteTitle>${item.fields.Title}</span>

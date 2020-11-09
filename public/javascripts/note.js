@@ -33,15 +33,25 @@ var notes = [
     }
 ];
 
+
+
 let params = (new URL(document.location)).searchParams;
 let query = params.get('n');
 console.log(query);
 
-var note = notes.find(e => e.id === parseInt(query));
+const url = `https://api.airtable.com/v0/appsCMsb32iQNMO3y/Table%201/${query}`;
 
-note.content = note.content.replace(/(\r\n|\n|\r)/gm,'<br>');
+fetch(url, { method: 'GET', headers: {'Authorization': 'Bearer keylpPfWBTCbx5mnW'}})
+.then(response => response.json())
+.then(data => {
 
-document.getElementById('noteViewTitle').innerHTML = note.title;
-document.getElementById('noteViewContent').innerHTML = note.content;
+    /**
+    data.fields.content = data.fields.content.replace(/(\r\n|\n|\r)/gm,'<br>');
+    */
+    
 
-console.log(note.content);
+    document.getElementById('noteViewTitle').innerHTML = data.fields.Title;
+    document.getElementById('noteViewContent').innerHTML = data.fields.Content;
+
+    
+});
