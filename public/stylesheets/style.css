@@ -163,14 +163,19 @@ a {
 
 #backBtn {
   color: #2980B9;
-  font-size: 40px;
+  width: 70px;
+}
+
+#editBtn {
+  color: #2980B9;
+  float: right;
+  width: 70px;
 }
 
 #noteViewTitle {
   color: white;
   font-size: 70px;
   font-weight: normal;
-
 }
 
 #noteViewContent {
@@ -180,9 +185,9 @@ a {
 
 /*footer*/
 #page-footer {
-  background-color: rgba(22, 22, 22, 0.97);
+  background-color: rgba(22, 22, 22, 0.96);
   bottom: 0px;
-  color: #2980B9;
+  color: #686868;
   font-family: comfortaa;
   font-size: 40px;
   text-align: center;
