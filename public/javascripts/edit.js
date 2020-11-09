@@ -12,7 +12,7 @@ document.getElementById('formEdit').addEventListener('submit', e => {
     var inputPrice = document.getElementById('content').value;
     console.log(inputTitle, inputPrice);
 
-    const url = `https://airtable.com/appsCMsb32iQNMO3y/api/docs#curl/ratelimits${query}`;
+    const url = `https://api.airtable.com/v0/appsCMsb32iQNMO3y/Table%201${query}`;
 
     fetch(url, { method: 'PATCH', body: JSON.stringify(expense), headers: {'Authorization': 'Bearer keylpPfWBTCbx5mnW', 'Content-Type': 'application/json' }})
     .then(response => response.json())
