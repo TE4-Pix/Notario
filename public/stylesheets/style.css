@@ -74,7 +74,7 @@ ul {
   z-index: 1;
 }
 
-.show {display:block;}
+
 
   /*dropdown content*/
 #addForm {
@@ -155,6 +155,14 @@ a {
   width: 70px;
 }
 
+#editButton {
+  float: right;
+}
+
+#formDiv {
+  min-height: 250px;
+}
+
 #editBtn {
   float: right;
   width: 70px;
@@ -169,6 +177,10 @@ a {
 #noteViewContent {
   color: white;
   font-size: 40px;
+}
+
+.hide {
+  display: none;
 }
 
 /*footer*/
@@ -190,4 +202,8 @@ a {
   float: left;
   padding: 20px;
   width: 100px;
-} 
+}
+
+.showForm {display: none;}
+
+.show {display:block;}

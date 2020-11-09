@@ -4,12 +4,26 @@ block content
   #topContent
     a(href='/')
       img(id='backBtn', src='/images/backIcon-blue.png')
-    a(href='')
+    button(onclick='hideView()', id='editButton')
       img(id='editBtn', src='/images/editIcon-blue.png') 
 
   #mainContent
-    h1#noteViewTitle
-    p#noteViewContent
+    div#noteView
+      h1#noteViewTitle
+      p#noteViewContent
+    
+    div#formDiv
+      form(id='formEdit', class='showForm')
+              p 
+                br
+                input(id='title', type = 'text', name ='title', placeholder='Title')
+                br
+                br
+                br
+                textarea(id='content', name='content', placeholder='Note', rows='4')
+                br
+                br
+              input(onclick='myFunction()', id='saveBtn', type='image', src='/images/doneIcon-square.png', class="button", value='Save')
 
   #page-footer
       a(href='')

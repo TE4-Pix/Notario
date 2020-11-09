@@ -55,3 +55,8 @@ fetch(url, { method: 'GET', headers: {'Authorization': 'Bearer keylpPfWBTCbx5mnW
 
     
 });
+
+function hideView() {
+    document.getElementById('noteView').classList.toggle('hide');
+    document.getElementById('formEdit').classList.toggle('show');
+}
