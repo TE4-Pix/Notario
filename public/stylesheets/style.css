@@ -196,3 +196,10 @@ a {
   position: fixed;
   width: 100%;
 }
+
+  /*note footer*/
+#page-footer .deleteBtn {
+  float: right;
+  padding: 100px;
+  width: 100px;
+} 
