@@ -93,6 +93,10 @@ ul {
   width: 50%;
 }
 
+input[type='text'], textarea {
+  font-size: inherit;
+}
+
 #content {
   border-radius: 5px;
   border-style: none;
@@ -133,7 +137,7 @@ a {
 
 .divContent {
   color: rgb(207, 207, 207);
-  font-size: 13px;
+  font-size: 25px;
   letter-spacing: 3px;
 }
 
