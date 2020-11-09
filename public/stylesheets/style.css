@@ -135,7 +135,7 @@ a {
 
 .divContent {
   color: rgb(207, 207, 207);
-  font-size: 25px;
+  font-size: 20px;
   letter-spacing: 3px;
 }
 
@@ -167,8 +167,8 @@ a {
 }
 
 #noteViewContent {
-  color: white;
-  font-size: 40px;
+  color: rgb(207, 207, 207);
+  font-size: 35px;
 }
 
 .hide {
