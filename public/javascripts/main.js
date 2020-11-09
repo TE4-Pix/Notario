@@ -35,31 +35,6 @@ var notes = [
 
 var count = 5;
 
-document.getElementById('FormAdd').addEventListener('submit', e => {
-    e.preventDefault();
-
-    let params = (new URL(document.location)).searchParams;
-    let query = params.get('e');
-    console.log(query);
-    
-    
-    var inputTitle = document.getElementById('title').value;
-    var inputContent = document.getElementById('content').value;
-    notes.unshift({
-        "id": count + 1,
-        "title": inputTitle,
-        "content": inputContent
-    });
-    
-    console.log(notes);
-
-    document.getElementById('title').value;
-    document.getElementById('content').value;
-
-    document.getElementById('entries').remove();
-    listItems();
-});
-
 function listItems() {
     fetch(`https://api.airtable.com/v0/appsCMsb32iQNMO3y/Table%201?api_key=keylpPfWBTCbx5mnW`)
     .then (response => response.json())
@@ -98,6 +73,9 @@ function listItems() {
         ul.appendChild(li);
     });
     document.getElementById('mainContent').appendChild(ul);
+
+    
+    
     
     
 
@@ -110,7 +88,49 @@ function listItems() {
 
 function myFunction() {
     document.getElementById('myDropdown').classList.toggle('show');
+
+
 }
+
+
+
+
+
+document.getElementById('FormAdd').addEventListener('submit', e => {
+    e.preventDefault();
+
+    
+    
+    let inputTitle = document.getElementById('title').value;
+    var inputContent = document.getElementById('content').value;
+    console.log(inputTitle, inputContent);
+
+    const url = 'https://api.airtable.com/v0/appsCMsb32iQNMO3y/Table%201';
+
+    const expense = {
+        
+        "fields": {
+            "Title": inputTitle,
+            "Content": inputContent
+        }
+        
+    }
+
+    fetch(url, { method: 'POST', body: JSON.stringify(expense), headers: {'Authorization': 'Bearer keylpPfWBTCbx5mnW', 'Content-Type': 'application/json' }})
+    .then(response => response.json())
+    .then(json => console.log(json))
+    .catch(err => console.log(err));
+
+    setTimeout(function(){ 
+        location.reload();
+        document.getElementById('entries').remove();
+        listItems();
+        
+    }, 500);
+    
+    
+    
+});
   
 
 listItems();
