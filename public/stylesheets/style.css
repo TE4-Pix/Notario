@@ -74,8 +74,6 @@ ul {
   z-index: 1;
 }
 
-
-
   /*dropdown content*/
 #addForm {
   margin: 0 auto;
@@ -93,23 +91,23 @@ ul {
   width: 50%;
 }
 
-input[type='text'], textarea {
-  font-size: inherit;
-}
-
 #content {
   border-radius: 5px;
   border-style: none;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 35px;
   padding: 5px;
-  width: 100%;
+  width: 99%;
 }
 
 #saveBtn {
   border-radius: 10px;
   float: right;
   width: 90px;
+}
+
+.show {
+  display:block;
 }
 
 /*Content column*/
@@ -141,10 +139,6 @@ a {
   letter-spacing: 3px;
 }
 
-.noteTitle:hover, .noteTitle:focus {
-  color: #2980B9;
-}
-
     /*Separate note page*/
 #topContent {
   background: rgb(43, 43, 43);
@@ -159,17 +153,11 @@ a {
   width: 70px;
 }
 
-#editButton {
-  float: right;
-}
-
-#formDiv {
-  min-height: 250px;
-}
-
-#editBtn {
-  float: right;
+#editButton, #editBtn {
+  background: rgb(43, 43, 43);
+  border: none;
   width: 70px;
+  float: right;
 }
 
 #noteViewTitle {
@@ -185,6 +173,15 @@ a {
 
 .hide {
   display: none;
+}
+
+.showForm {
+  display: none;
+}
+
+    /*edit form*/
+#formDiv {
+  min-height: 410px;
 }
 
 /*footer*/
@@ -208,6 +205,6 @@ a {
   width: 100px;
 }
 
-.showForm {display: none;}
-
-.show {display:block;}
+.show {
+  display:block;
+}
