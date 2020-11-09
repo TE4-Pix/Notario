@@ -52,7 +52,7 @@ function listItems() {
         li.classList.add('entry');
 
         
-        temp = item.fields.Content.replace(/(\r\n|\n|\r)/gm,'');
+        temp = item.fields.Content.replace(/(\r\n|\n|\r)/gm,' ');
         if(temp.length > 30) temp = temp.substring(0,30);
         if(temp.length > 26) temp = temp + '...';
         
