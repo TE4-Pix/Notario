@@ -63,7 +63,7 @@ ul {
   width: 100%;
 }
 
-#dropBtn:hover, #dropBtn:focus {
+#dropBtn:hover {
   color: #2980B9;
 }
 
