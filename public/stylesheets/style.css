@@ -128,16 +128,36 @@ a {
   text-decoration: none;
 }
 
+.notePreview {
+  overflow: auto;
+}
+
+.btnHide {
+  background: none;
+  border-style: none;
+  float: right;
+  padding: 0px;
+}
+
+.btnHide img {
+  width: 90px;
+}
+
 .noteTitle {
   color: white;
   font-size: 50px;
+  float: left;
   letter-spacing: 1px;
+  width: 100%;
 }
 
 .divContent {
   color: rgb(207, 207, 207);
   font-size: 35px;
+  float: left;
   letter-spacing: 3px;
+  margin: 0;
+  width: 85%;
 }
 
     /*Separate note page*/
@@ -233,12 +253,12 @@ a {
   border-style: none;
   float: left;
   margin-top: 10px;
+  margin-left: 40px;
   padding: 0px;
 }
 
 #page-footer .deleteSquare {
   border-radius: 15px;
-  margin-left: 40px;
   padding: 10px;
   width: 90px;
 }
@@ -248,11 +268,11 @@ a {
   background: none;
   border-style: none;
   float: left;
+  margin-left: 20px;
   padding: 0px;
 }
 
 #page-footer .deleteBtn {
-  margin-left: 20px;
   padding: 10px;
   width: 100px;
 }

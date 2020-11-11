@@ -26,11 +26,10 @@ function listItems() {
 
         const markup = ` 
                     <div class='notePreview'>
-                    <a href="/note?n=${item.id}"><div class=notePreview>
+                    <a href="/note?n=${item.id}">
                     <br>
                     <h2 class=noteTitle>${item.fields.Title}</h2>
                     <div class=divContent>${temp}</div>
-                    <br>
                     </a>
                     <button onclick='deleteSelectFunction()' class='btnHide'><img src='/images/deleteIcon-red.png'></button>
                     </div>
