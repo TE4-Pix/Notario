@@ -25,15 +25,16 @@ function listItems() {
         }
 
         const markup = ` 
+                    <div class='notePreview'>
                     <a href="/note?n=${item.id}"><div class=notePreview>
-                    <h2>
-                    </br>
-                    <span class=noteTitle>${item.fields.Title}</span>
+                    <br>
+                    <h2 class=noteTitle>${item.fields.Title}</h2>
                     <div class=divContent>${temp}</div>
-                    </br>
+                    <br>
+                    </a>
+                    <button onclick='deleteSelectFunction()' class='btnHide'><img src='/images/deleteIcon-red.png'></button>
+                    </div>
                     <hr>
-                    </h2>
-                    </div></a>
         `;
 
         li.innerHTML = markup;
