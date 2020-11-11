@@ -12,9 +12,9 @@ fetch(url, { method: 'GET', headers: {'Authorization': 'Bearer keylpPfWBTCbx5mnW
 
     document.getElementById('noteViewTitle').innerHTML = data.fields.Title;
     document.getElementById('noteViewContent').innerHTML = temp;
-
+    
     document.getElementById('title').value = tempTitle;
-    document.getElementById('content').innerHTML = temp;
+    document.getElementById('content').innerHTML = data.fields.Content;
 });
 
 document.getElementById('formEdit').addEventListener('submit', e => {
