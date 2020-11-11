@@ -20,9 +20,10 @@ ul {
 #page-header {
   margin: 0 auto;
   margin-top: 40px;
+  margin-bottom: 20px;
   width: 90%;
   padding: 0px;
-  height: 130px;
+  overflow: auto;
   color: white;
 }
 
@@ -59,7 +60,7 @@ ul {
   border-radius: 5px;
   color: white;
   font-family: comfortaa;
-  font-size: 50px;
+  font-size: 65px;
   text-align: left;
   width: 100%;
 }
@@ -83,22 +84,26 @@ ul {
   width: 100%;
 }
 
-#title {
-  border-radius: 5px;
+#addNote #title {
+  background: rgba(22, 22, 22);
+  border-radius: 10px;
   border-style: none;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 35px;
-  padding: 5px;
-  width: 50%;
+  color: white;
+  font-family: comfortaa;
+  font-size: 65px;
+  padding: 10px;
+  width: 97%;
 }
 
-#content {
-  border-radius: 5px;
+#addNote #content {
+  background: rgba(22, 22, 22);
+  border-radius: 10px;
   border-style: none;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 35px;
-  padding: 5px;
-  width: 99%;
+  color: white;
+  font-family: comfortaa;
+  font-size: 65px;
+  padding: 10px;
+  width: 97%;
 }
 
 #saveBtn {
@@ -182,20 +187,26 @@ a {
 }
 
     /*edit content*/
-#editText input {
-  background: rgb(43, 43, 43);
+#editText #title {
+  background: rgba(22, 22, 22);
+  border-radius: 10px;
+  border-style: none;
   color: white;
   font-family: comfortaa;
   font-size: 70px;
-  padding: 0;
+  padding: 10px;
+  width: 97%;
 }
 
 #editText textarea {
-  background: rgb(43, 43, 43);
+  background: rgba(22, 22, 22);
+  border-radius: 10px;
+  border-style: none;
   color: rgb(207, 207, 207);
   font-family: comfortaa;
   font-size: 45px;
-  padding: 0;
+  padding: 10px;
+  width: 97%;
 }
 
 /*footer*/
