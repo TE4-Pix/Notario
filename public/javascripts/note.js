@@ -48,8 +48,6 @@ document.getElementById('formEdit').addEventListener('submit', e => {
         
     }, 500);
 
-    
-
 });
 
 function hideView() {
