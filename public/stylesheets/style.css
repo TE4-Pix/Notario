@@ -4,9 +4,8 @@ body {
   background: rgba(20, 20, 20);
   background-repeat: no-repeat;
   background-size: cover;
-  font: Verdana, Helvetica, Arial, sans-serif;
+  font-family: Comfortaa, Verdana, Helvetica, Arial, sans-serif;
   margin: 0;
-  min-width: 300px;
   padding: 0;
 }
 
@@ -29,7 +28,6 @@ ul {
 
 #page-header h1 {
   float: left;
-  font-family: Comfortaa;
   font-size: 110px;
   margin:0;
 }
@@ -58,15 +56,11 @@ ul {
   background: rgb(43, 43, 43);
   border-style: none;
   border-radius: 5px;
-  color: white;
+  color: #2980B9;
   font-family: comfortaa;
   font-size: 65px;
   text-align: left;
   width: 100%;
-}
-
-#dropBtn:hover {
-  color: #2980B9;
 }
 
 .dropdown-content {
@@ -209,27 +203,50 @@ a {
   width: 97%;
 }
 
+.show {
+  display:block;
+}
+
 /*footer*/
 #page-footer {
   background-color: rgba(22, 22, 22, 0.96);
   bottom: 0px;
-  color: #686868;
-  font-family: comfortaa;
-  font-size: 40px;
-  text-align: center;
+  height: 130px;
+  overflow: auto;
   margin: 0;
   padding: 0;
   position: fixed;
   width: 100%;
 }
 
+#page-footer h3 {
+  color: #686868;
+  font-family: comfortaa;
+  font-size: 40px;
+  font-weight: normal;
+  text-align: center;
+}
+
   /*note footer*/
-#page-footer .deleteBtn {
+#page-footer #deleteBtn {
+  background: none;
+  border-style: none;
   float: left;
-  padding: 20px;
+  padding: 0px;
+}
+
+#page-footer .deleteBtn {
+  margin-left: 20px;
+  padding: 10px;
   width: 100px;
 }
 
-.show {
-  display:block;
+#page-footer p {
+  color: #2980B9;
+  float: right;
+  font-family: comfortaa;
+  font-size: 110px;
+  margin: 0;
+  margin-right: 40px;
+  padding: 10px;
 }
