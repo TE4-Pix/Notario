@@ -52,8 +52,6 @@ document.getElementById('formEdit').addEventListener('submit', e => {
 
 });
 
-
-
 function hideView() {
     document.getElementById('noteView').classList.toggle('hide');
     document.getElementById('formEdit').classList.toggle('show');
