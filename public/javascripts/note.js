@@ -7,15 +7,14 @@ const url = `https://api.airtable.com/v0/appsCMsb32iQNMO3y/Table%201/${query}`;
 fetch(url, { method: 'GET', headers: {'Authorization': 'Bearer keylpPfWBTCbx5mnW'}})
 .then(response => response.json())
 .then(data => {
-
     var temp = data.fields.Content.replace(/(\r\n|\n|\r)/gm,'<br>');
-    
-    
+    var tempTitle = data.fields.Title;
 
     document.getElementById('noteViewTitle').innerHTML = data.fields.Title;
     document.getElementById('noteViewContent').innerHTML = temp;
 
-    
+    document.getElementById('title').value = tempTitle;
+    document.getElementById('content').innerHTML = temp;
 });
 
 document.getElementById('formEdit').addEventListener('submit', e => {
@@ -49,7 +48,11 @@ document.getElementById('formEdit').addEventListener('submit', e => {
         
     }, 500);
 
+    
+
 });
+
+
 
 function hideView() {
     document.getElementById('noteView').classList.toggle('hide');
