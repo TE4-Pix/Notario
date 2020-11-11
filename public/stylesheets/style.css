@@ -6,6 +6,7 @@ body {
   background-size: cover;
   font: Verdana, Helvetica, Arial, sans-serif;
   margin: 0;
+  min-width: 300px;
   padding: 0;
 }
 
@@ -118,6 +119,7 @@ ul {
   margin: 0 auto;
   margin-top: 40px;
   margin-bottom: 150px;
+  overflow: auto;
   padding: 20px;
   width: 85%;
 }
@@ -129,13 +131,13 @@ a {
 
 .noteTitle {
   color: white;
-  font-size: 35px;
+  font-size: 60px;
   letter-spacing: 1px;
 }
 
 .divContent {
   color: rgb(207, 207, 207);
-  font-size: 20px;
+  font-size: 35px;
   letter-spacing: 3px;
 }
 
@@ -168,7 +170,7 @@ a {
 
 #noteViewContent {
   color: rgb(207, 207, 207);
-  font-size: 35px;
+  font-size: 45px;
 }
 
 .hide {
@@ -177,11 +179,6 @@ a {
 
 .showForm {
   display: none;
-}
-
-    /*edit form*/
-#formDiv {
-  min-height: 485px;
 }
 
 /*footer*/
