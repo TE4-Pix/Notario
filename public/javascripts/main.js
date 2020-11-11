@@ -24,9 +24,6 @@ function listItems() {
             if(temp.length > 26) temp = temp + '...';
         }
 
-        
-        
-
         const markup = ` 
                     <a href="/note?n=${item.id}"><div class=notePreview>
                     <h2>
@@ -84,7 +81,7 @@ document.getElementById('FormAdd').addEventListener('submit', e => {
         document.getElementById('entries').remove();
         listItems();
         
-    }, 500);
+    }, 700);
     
     
     
