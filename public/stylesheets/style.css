@@ -224,7 +224,23 @@ a {
   font-family: comfortaa;
   font-size: 40px;
   font-weight: normal;
+  margin-right: 130px;
   text-align: center;
+}
+
+#page-footer #deleteSquare {
+  background: none;
+  border-style: none;
+  float: left;
+  margin-top: 10px;
+  padding: 0px;
+}
+
+#page-footer .deleteSquare {
+  border-radius: 15px;
+  margin-left: 40px;
+  padding: 10px;
+  width: 90px;
 }
 
   /*note footer*/
