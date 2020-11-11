@@ -31,7 +31,6 @@ function listItems() {
                     <h2 class=noteTitle>${item.fields.Title}</h2>
                     <div class=divContent>${temp}</div>
                     </a>
-                    <button onclick='deleteSelectFunction()' class='btnHide'><img src='/images/deleteIcon-red.png'></button>
                     </div>
                     <hr>
         `;
@@ -44,7 +43,7 @@ function listItems() {
 });
 
 }
-
+//<button class='btnHide' value='${item.id}'><img src='/images/deleteIcon-red.png'></button>
 function myFunction() {
     document.getElementById('myDropdown').classList.toggle('show');
 
@@ -102,6 +101,49 @@ for (var i = 0 ; i < inputs.length; i++) {
          nextInput[0].focus();
       }
    })
+}
+
+function deleteSelectFunction() {
+    const url = `https://api.airtable.com/v0/appsCMsb32iQNMO3y/Table%201/${id}`;
+
+    fetch(url, { method: 'DELETE', headers: { 'Authorization': 'Bearer keylpPfWBTCbx5mnW', 'Content-Type': 'application/json' } })
+            .then(response => response.json())
+            .then(json => console.log(json))
+            .catch(err => console.log(err));
+
+    setTimeout(function () {
+        location.reload();
+
+    }, 500);
+}
+
+/**
+document.querySelectorAll('.btnHide').forEach(item => {
+    console.log('nice');
+    
+    item.addEventListener('click', event => {
+        
+        const url = `https://api.airtable.com/v0/appsCMsb32iQNMO3y/Table%201/${item.value}`;
+
+        fetch(url, { method: 'DELETE', headers: { 'Authorization': 'Bearer keylpPfWBTCbx5mnW', 'Content-Type': 'application/json' } })
+                .then(response => response.json())
+                .then(json => console.log(json))
+                .catch(err => console.log(err));
+    
+        setTimeout(function () {
+            location.reload();
+    
+        }, 500);
+    })
+})
+*/
+
+
+var deleteLink = document.querySelectorAll('.btnHide');
+for (var i = 0; i < deleteLink.length; i++) {
+    deleteLink[i].addEventListener('click', function(event) {
+        console.log('nice');
+    });
 }
   
 
