@@ -39,11 +39,6 @@ function listItems() {
     });
     document.getElementById('mainContent').appendChild(ul);
 
-    
-    
-    
-    
-
 })
 .catch(() => {
     console.log('ERROR');

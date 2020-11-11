@@ -26,7 +26,8 @@ block content
             input(onclick='myFunction()', id='saveBtn', type='image', src='/images/doneIcon-square.png', class="button", value='Save')
 
   #page-footer
-      //a(href='')       kommenterad tills funktionen är klar
+      button(id='deleteBtn', onclick='deleteFunction()')
         img(class='deleteBtn', src='/images/deleteIcon-blue.png')
   
   script(src='/javascripts/note.js')
+  script(src='/javascripts/delete.js')
