@@ -56,7 +56,7 @@ ul {
   background: rgb(43, 43, 43);
   border-style: none;
   border-radius: 5px;
-  color: #2980B9;
+  color: white;
   font-family: comfortaa;
   font-size: 65px;
   text-align: left;
@@ -157,7 +157,7 @@ a {
   float: left;
   letter-spacing: 3px;
   margin: 0;
-  width: 85%;
+  width: 88%;
 }
 
     /*Separate note page*/
