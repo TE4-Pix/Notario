@@ -54,14 +54,11 @@ function myFunction() {
 document.getElementById('FormAdd').addEventListener('submit', e => {
     e.preventDefault();
 
-    
-    
     var inputTitle = document.getElementById('title').value;
     var inputContent = document.getElementById('content').value;
-    console.log(inputTitle, inputContent);
 
     if (!inputTitle) {
-        inputTitle = '(No Title)';
+        inputTitle = '(Untitled note)';
     }
 
     if (!inputContent) {
@@ -90,8 +87,6 @@ document.getElementById('FormAdd').addEventListener('submit', e => {
         listItems();
         
     }, 700);
-    
-    
     
 });
   

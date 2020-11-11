@@ -19,11 +19,6 @@ fetch(url, { method: 'GET', headers: {'Authorization': 'Bearer keylpPfWBTCbx5mnW
 
 document.getElementById('formEdit').addEventListener('submit', e => {
     e.preventDefault();
-
-    let params = (new URL(document.location)).searchParams;
-    let query = params.get('n');
-    console.log(query);
-    
     
     let inputTitle = document.getElementById('title').value;
     var inputContent = document.getElementById('content').value;
