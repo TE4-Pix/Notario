@@ -56,9 +56,17 @@ document.getElementById('FormAdd').addEventListener('submit', e => {
 
     
     
-    let inputTitle = document.getElementById('title').value;
+    var inputTitle = document.getElementById('title').value;
     var inputContent = document.getElementById('content').value;
     console.log(inputTitle, inputContent);
+
+    if (!inputTitle) {
+        inputTitle = '(No Title)';
+    }
+
+    if (!inputContent) {
+        inputContent = ' ';
+    }
 
     const url = 'https://api.airtable.com/v0/appsCMsb32iQNMO3y/Table%201';
 
