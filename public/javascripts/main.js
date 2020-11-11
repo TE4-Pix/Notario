@@ -16,10 +16,15 @@ function listItems() {
         const li = document.createElement('li');
         li.classList.add('entry');
 
+        var temp;
+
+        if (!!item.fields.Content) {
+            temp = item.fields.Content.replace(/(\r\n|\n|\r)/gm,' ');
+            if(temp.length > 30) temp = temp.substring(0,30);
+            if(temp.length > 26) temp = temp + '...';
+        }
+
         
-        temp = item.fields.Content.replace(/(\r\n|\n|\r)/gm,' ');
-        if(temp.length > 30) temp = temp.substring(0,30);
-        if(temp.length > 26) temp = temp + '...';
         
 
         const markup = ` 
@@ -39,9 +44,6 @@ function listItems() {
     });
     document.getElementById('mainContent').appendChild(ul);
 
-})
-.catch(() => {
-    console.log('ERROR');
 });
 
 }
