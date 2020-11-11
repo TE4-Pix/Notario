@@ -3,7 +3,6 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var mongoose = require('mongoose');
 
 var indexRouter = require('./routes/index');
 var noteRouter = require('./routes/note');
@@ -38,18 +37,6 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
-});
-
-const mongoString = "mongodb+srv://NotarioAdmin:pix123@notariocluster.vqbs6.mongodb.net/notario?retryWrites=true&w=majority";
-
-mongoose.connect(mongoString, {useNewUrlParser: true,  useUnifiedTopology: true });
-
-mongoose.connection.on("error", function(error) {
-  console.log(error);
-});
-
-mongoose.connection.on("open", function() {
-  console.log("Connected to MongoDB database.");
 });
 
 module.exports = app;
