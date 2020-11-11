@@ -16,11 +16,13 @@ function listItems() {
         const li = document.createElement('li');
         li.classList.add('entry');
 
-        
-        temp = item.fields.Content.replace(/(\r\n|\n|\r)/gm,' ');
-        if(temp.length > 30) temp = temp.substring(0,30);
-        if(temp.length > 26) temp = temp + '...';
-        
+        var temp;
+
+        if (!!item.fields.Content) {
+            temp = item.fields.Content.replace(/(\r\n|\n|\r)/gm,' ');
+            if(temp.length > 30) temp = temp.substring(0,30);
+            if(temp.length > 26) temp = temp + '...';
+        }
 
         const markup = ` 
                     <a href="/note?n=${item.id}"><div class=notePreview>
@@ -39,9 +41,6 @@ function listItems() {
     });
     document.getElementById('mainContent').appendChild(ul);
 
-})
-.catch(() => {
-    console.log('ERROR');
 });
 
 }
@@ -55,11 +54,16 @@ function myFunction() {
 document.getElementById('FormAdd').addEventListener('submit', e => {
     e.preventDefault();
 
-    
-    
-    let inputTitle = document.getElementById('title').value;
+    var inputTitle = document.getElementById('title').value;
     var inputContent = document.getElementById('content').value;
-    console.log(inputTitle, inputContent);
+
+    if (!inputTitle) {
+        inputTitle = '(Untitled note)';
+    }
+
+    if (!inputContent) {
+        inputContent = ' ';
+    }
 
     const url = 'https://api.airtable.com/v0/appsCMsb32iQNMO3y/Table%201';
 
@@ -82,9 +86,7 @@ document.getElementById('FormAdd').addEventListener('submit', e => {
         document.getElementById('entries').remove();
         listItems();
         
-    }, 500);
-    
-    
+    }, 700);
     
 });
   
