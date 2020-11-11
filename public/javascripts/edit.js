@@ -1,5 +1,3 @@
-
-
 document.getElementById('formEdit').addEventListener('submit', e => {
     e.preventDefault();
 
